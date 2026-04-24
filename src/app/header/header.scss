@@ -1,0 +1,140 @@
+.hb-header {
+  background: #fff;
+  border-bottom: 1px solid #cce0f5;
+  font-family: 'DM Sans', sans-serif;
+  width: 100%;
+}
+
+.hb-top-bar {
+  background: #3b8ed4;
+  padding: 7px 40px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+}
+.hb-top-bar span {
+  color: #e4f2fc;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.hb-top-bar span svg {
+  width: 13px;
+  height: 13px;
+  fill: #b8d9f5;
+  flex-shrink: 0;
+}
+
+.hb-main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  height: 84px;
+}
+
+.hb-logo {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  text-decoration: none;
+}
+.hb-logo-icon {
+  width: 52px;
+  height: 52px;
+  background: #3b8ed4;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hb-logo-icon svg {
+  width: 30px;
+  height: 30px;
+  fill: #fff;
+}
+
+.hb-nav {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  list-style: none;
+}
+.hb-nav li a {
+  text-decoration: none;
+  color: #4a6a8a;
+  font-size: 15px;
+  font-weight: 500;
+  padding: 8px 18px;
+  border-radius: 8px;
+  transition: all 0.18s ease;
+  display: block;
+}
+.hb-nav li a:hover {
+  color: #3b8ed4;
+  background: #eaf4fd;
+}
+.hb-nav li a.active {
+  color: #3b8ed4;
+  background: #d6ebfa;
+}
+.hb-nav li a.active::after {
+  content: '';
+  display: block;
+  height: 2px;
+  background: #3b8ed4;
+  border-radius: 2px;
+  margin-top: 3px;
+}
+
+.hb-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.hb-btn-outline {
+  background: #eaf4fd;
+  border: 1.5px solid #3b8ed4;
+  color: #3b8ed4;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13.5px;
+  font-weight: 500;
+  padding: 9px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.18s ease;
+}
+.hb-btn-outline:hover {
+  background: #d6ebfa;
+}
+.hb-btn-solid {
+  background: #3b8ed4;
+  border: none;
+  color: #fff;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13.5px;
+  font-weight: 500;
+  padding: 9px 22px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.18s ease;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.hb-btn-solid:hover {
+  background: #2d7bbf;
+}
+.hb-btn-solid svg {
+  width: 14px;
+  height: 14px;
+  fill: rgba(255, 255, 255, 0.9);
+}
+
+.hb-divider {
+  width: 1px;
+  height: 22px;
+  background: #cce0f5;
+  margin: 0 4px;
+}

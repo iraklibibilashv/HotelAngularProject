@@ -1,0 +1,41 @@
+<div class="details-page" *ngIf="hotel">
+  <div class="hotel-hero">
+    <img [src]="hotel.featuredImage" [alt]="hotel.name" />
+    <div class="hotel-hero-info">
+      <h1>{{ hotel.name }}</h1>
+      <div class="hotel-address">
+        <svg viewBox="0 0 24 24">
+          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" />
+        </svg>
+        {{ hotel.address }}
+      </div>
+    </div>
+  </div>
+
+  <div class="rooms-section">
+    <h2>Available Rooms</h2>
+    <div class="rooms-list">
+      @for (room of hotel.rooms; track room.id) {
+        <div class="room-card">
+          <img [src]="room.images[0].source" [alt]="room.name" class="room-img" 
+          onerror="this.src='https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=600&q=80'"/>
+          <div class="room-info">
+            <div class="room-name">{{ room.name }}</div>
+            <div class="room-meta">
+              <span>
+                <svg viewBox="0 0 24 24">
+                  <path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/>
+                </svg>
+                Max {{ room.maximumGuests }} guests
+              </span>
+              <span class="room-available" [class.unavailable]="!room.available">
+                {{ room.available ? 'Available' : 'Unavailable' }}
+              </span>
+            </div>
+            <div class="room-price">${{ room.pricePerNight }}<span> / night</span></div>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</div>

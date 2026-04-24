@@ -1,0 +1,349 @@
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: #f4f8fd;
+}
+
+/* ───── HEADER ───── */
+.hb-header {
+  background: #fff;
+  border-bottom: 1px solid #cce0f5;
+}
+.hb-top-bar {
+  background: #3b8ed4;
+  padding: 7px 40px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+}
+.hb-top-bar span {
+  color: #e4f2fc;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.hb-top-bar span svg {
+  width: 13px;
+  height: 13px;
+  fill: #b8d9f5;
+  flex-shrink: 0;
+}
+.hb-main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  height: 84px;
+}
+.hb-logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+.hb-logo-icon {
+  width: 52px;
+  height: 52px;
+  background: #3b8ed4;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hb-logo-icon svg {
+  width: 30px;
+  height: 30px;
+  fill: #fff;
+}
+.hb-nav {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  list-style: none;
+}
+.hb-nav li a {
+  text-decoration: none;
+  color: #4a6a8a;
+  font-size: 15px;
+  font-weight: 500;
+  padding: 8px 18px;
+  border-radius: 8px;
+  transition: all 0.18s ease;
+  display: block;
+}
+.hb-nav li a:hover {
+  color: #3b8ed4;
+  background: #eaf4fd;
+}
+.hb-nav li a.active {
+  color: #3b8ed4;
+  background: #d6ebfa;
+}
+.hb-nav li a.active::after {
+  content: '';
+  display: block;
+  height: 2px;
+  background: #3b8ed4;
+  border-radius: 2px;
+  margin-top: 3px;
+}
+.hb-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.hb-btn-outline {
+  background: #eaf4fd;
+  border: 1.5px solid #3b8ed4;
+  color: #3b8ed4;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13.5px;
+  font-weight: 500;
+  padding: 9px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.18s ease;
+}
+.hb-btn-outline:hover {
+  background: #d6ebfa;
+}
+.hb-btn-solid {
+  background: #3b8ed4;
+  border: none;
+  color: #fff;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13.5px;
+  font-weight: 500;
+  padding: 9px 22px;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.18s ease;
+}
+.hb-btn-solid:hover {
+  background: #2d7bbf;
+}
+.hb-btn-solid svg {
+  width: 14px;
+  height: 14px;
+  fill: rgba(255, 255, 255, 0.9);
+}
+.hb-divider {
+  width: 1px;
+  height: 22px;
+  background: #cce0f5;
+  margin: 0 4px;
+}
+
+/* ───── HERO ───── */
+.hero {
+  position: relative;
+  height: 520px;
+  overflow: hidden;
+}
+.hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(10, 30, 60, 0.52);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 40px;
+}
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(59, 142, 212, 0.3);
+  border: 1px solid rgba(59, 142, 212, 0.5);
+  color: #90c8f0;
+  font-size: 12.5px;
+  font-weight: 500;
+  padding: 5px 14px;
+  border-radius: 20px;
+  margin-bottom: 24px;
+}
+.hero-badge svg {
+  width: 13px;
+  height: 13px;
+  fill: #90c8f0;
+}
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 52px;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.15;
+  margin-bottom: 18px;
+}
+.hero h1 span {
+  color: #7ec4f0;
+}
+.hero p {
+  font-size: 17px;
+  color: #c8dff0;
+  max-width: 500px;
+  margin: 0 auto 36px;
+  line-height: 1.7;
+}
+.hero-actions {
+  display: flex;
+  gap: 12px;
+}
+.hero-cta-primary {
+  background: #3b8ed4;
+  border: none;
+  color: #fff;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  padding: 13px 30px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.18s ease;
+}
+.hero-cta-primary:hover {
+  background: #2d7bbf;
+}
+.hero-cta-secondary {
+  background: transparent;
+  border: 1.5px solid rgba(255, 255, 255, 0.35);
+  color: #fff;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  padding: 13px 30px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.18s ease;
+}
+.hero-cta-secondary:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* ───── STATS ───── */
+.stats-bar {
+  background: #fff;
+  border-bottom: 1px solid #daeaf7;
+  display: flex;
+  justify-content: center;
+}
+.stat-item {
+  padding: 22px 48px;
+  text-align: center;
+  border-right: 1px solid #daeaf7;
+}
+.stat-item:last-child {
+  border-right: none;
+}
+.stat-num {
+  font-family: 'Playfair Display', serif;
+  font-size: 28px;
+  font-weight: 600;
+  color: #1a3f6f;
+}
+.stat-label {
+  font-size: 12.5px;
+  color: #7a9ab8;
+  margin-top: 2px;
+}
+
+/* ───── FEATURED HOTELS ───── */
+.section {
+  padding: 64px 40px;
+}
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 36px;
+}
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 32px;
+  font-weight: 600;
+  color: #0d2d52;
+}
+.section-sub {
+  font-size: 14px;
+  color: #7a9ab8;
+  margin-top: 6px;
+}
+.view-all {
+  color: #3b8ed4;
+  font-size: 13.5px;
+  font-weight: 500;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.view-all svg {
+  width: 14px;
+  height: 14px;
+  fill: #3b8ed4;
+}
+
+.hotel-card {
+  background: #fff;
+  border-radius: 16px;
+  border: 1px solid #daeaf7;
+  overflow: hidden;
+  max-width: 100%;
+}
+.hotel-card-img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  display: block;
+}
+.hotel-card-img-placeholder {
+  width: 100%;
+  height: 260px;
+  background: #daeaf7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hotel-card-img-placeholder svg {
+  width: 56px;
+  height: 56px;
+  fill: #3b8ed4;
+  opacity: 0.4;
+}
+.hotel-card-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  font-weight: 600;
+  color: #0d2d52;
+  padding: 18px 20px;
+}
+.hotel-card-location {
+  font-size: 15px;
+  color: #7a9ab8;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 0 20px 18px;
+}
+
+.hotel-card-location svg {
+  width: 13px;
+  height: 13px;
+  fill: #7a9ab8;
+  flex-shrink: 0;
+}
+.hotels-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
