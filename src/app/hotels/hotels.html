@@ -1,18 +1,19 @@
 <div class="hotels-page">
-
   <div class="hotels-header">
     <h1>Hotels</h1>
     <div class="filter-buttons">
-      <button 
-        class="filter-btn" 
+      <button
+        class="filter-btn"
         [class.active]="activeFilter === 'All'"
-        (click)="filterHotels('All')">
+        (click)="filterHotels('All')"
+      >
         All
       </button>
-      <button 
-        class="filter-btn" 
+      <button
+        class="filter-btn"
         [class.active]="activeFilter === 'Tbilisi'"
-        (click)="filterHotels('Tbilisi')">
+        (click)="filterHotels('Tbilisi')"
+      >
         Tbilisi
       </button>
     </div>
@@ -20,9 +21,15 @@
 
   <div class="hotels-list">
     @for (item of filteredHotels; track item.id) {
-      <div class="hotel-card" (click)="goToDetails(item.id)" style="cursor: pointer;">
-        <img class="hotel-card-img" [src]="item.featuredImage" [alt]="item.name"
-             onerror="this.src='https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=600&q=80'" />
+      <div class="hotel-card" (click)="goToDetails(item.id)" style="cursor: pointer">
+        <img
+          class="hotel-card-img"
+          [src]="item.featuredImage"
+          [alt]="item.name"
+          onerror="
+            this.src = 'https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=600&q=80'
+          "
+        />
         <div class="hotel-card-name">{{ item.name }}</div>
         <div class="hotel-card-location">
           <svg viewBox="0 0 24 24">
@@ -33,5 +40,4 @@
       </div>
     }
   </div>
-
 </div>

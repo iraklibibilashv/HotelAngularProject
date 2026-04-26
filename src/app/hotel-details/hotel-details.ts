@@ -5,24 +5,26 @@ import { Api } from '../services/api';
 
 @Component({
   selector: 'app-hotel-details',
-  imports: [RouterModule,CommonModule],
+  imports: [RouterModule, CommonModule],
   templateUrl: './hotel-details.html',
   styleUrl: './hotel-details.scss',
 })
 export class HotelDetails {
   constructor(
-    private api : Api,
-    private cdr : ChangeDetectorRef,
-    private route : ActivatedRoute,
-    private router : Router
+    private api: Api,
+    private cdr: ChangeDetectorRef,
+    private route: ActivatedRoute,
+    private router: Router,
   ) {}
-  hotel : any = null;
-ngOnInit() {
-  const id = Number(this.route.snapshot.paramMap.get('id'));
-  this.api.getHotelById(id).subscribe((data: any) => {
-    this.hotel = data;
-    this.cdr.detectChanges();
-  
-  });
-}
+  hotel: any = null;
+  ngOnInit() {
+    const id = Number(this.route.snapshot.paramMap.get('id'));
+    this.api.getHotelById(id).subscribe((data: any) => {
+      this.hotel = data;
+      this.cdr.detectChanges();
+    });
+  }
+  goToRoomDetails(id: number) {
+    this.router.navigate(['/room-details', id]);
+  }
 }

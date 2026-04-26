@@ -9,32 +9,31 @@ import { Api } from '../services/api';
   styleUrl: './home.scss',
 })
 export class Home {
-  constructor(private api : Api,
-    private cdr : ChangeDetectorRef,
-    private router : Router,
-    private route : ActivatedRoute
+  constructor(
+    private api: Api,
+    private cdr: ChangeDetectorRef,
+    private router: Router,
+    private route: ActivatedRoute,
   ) {}
-  hotels : any[] = []
+  hotels: any[] = [];
 
-  ngOnInit(){
-    this.getAllHotels()
+  ngOnInit() {
+    this.getAllHotels();
   }
 
-  getAllHotels(){this.api.getHotels("Hotels/GetAll").subscribe({
-    next : (data : any) => {
-      this.hotels = data
-      console.log(this.hotels);
-      this.cdr.detectChanges()
-      
-
-    },
-    error : (err : any) => {
-      console.log(err)
-      this.cdr.detectChanges()
-    }
-  })
-}
-  goToDetails(id : number){
-    this.router.navigate(['/hotel-details',id])
+  getAllHotels() {
+    this.api.getHotels('Hotels/GetAll').subscribe({
+      next: (data: any) => {
+        this.hotels = data;
+        this.cdr.detectChanges();
+      },
+      error: (err: any) => {
+        console.log(err);
+        this.cdr.detectChanges();
+      },
+    });
+  }
+  goToDetails(id: number) {
+    this.router.navigate(['/hotel-details', id]);
   }
 }

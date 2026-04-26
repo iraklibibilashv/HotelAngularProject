@@ -1,0 +1,179 @@
+.booking-page {
+  font-family: 'DM Sans', sans-serif;
+  background: #f4f8fd;
+  min-height: 100vh;
+  padding: 48px 40px;
+}
+
+.booking-header {
+  margin-bottom: 36px;
+
+  h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    font-weight: 600;
+    color: #0d2d52;
+    margin-bottom: 6px;
+  }
+
+  p {
+    font-size: 14px;
+    color: #7a9ab8;
+  }
+}
+
+.booking-layout {
+  display: flex;
+  gap: 28px;
+  align-items: flex-start;
+}
+
+.booking-form {
+  flex: 1;
+  background: #fff;
+  border: 1px solid #daeaf7;
+  border-radius: 16px;
+  padding: 28px;
+
+  h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 600;
+    color: #0d2d52;
+    margin-bottom: 24px;
+  }
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 20px;
+
+  label {
+    font-size: 13px;
+    font-weight: 500;
+    color: #4a6a8a;
+  }
+
+  input {
+    border: 1.5px solid #cce0f5;
+    border-radius: 8px;
+    padding: 10px 14px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    color: #0d2d52;
+    outline: none;
+
+    &:focus {
+      border-color: #3b8ed4;
+    }
+  }
+}
+
+.form-row {
+  display: flex;
+  gap: 16px;
+
+  .form-group {
+    flex: 1;
+  }
+}
+
+.btn-submit {
+  width: 100%;
+  background: #3b8ed4;
+  border: none;
+  color: #fff;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  padding: 13px;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 8px;
+  transition: all 0.18s ease;
+
+  &:hover {
+    background: #2d7bbf;
+  }
+}
+
+.booking-summary {
+  width: 320px;
+  flex-shrink: 0;
+
+  h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 600;
+    color: #0d2d52;
+    margin-bottom: 16px;
+  }
+}
+
+.summary-card {
+  background: #fff;
+  border: 1px solid #daeaf7;
+  border-radius: 16px;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+  }
+}
+
+.summary-info {
+  padding: 16px 20px;
+  border-bottom: 1px solid #edf4fb;
+}
+
+.summary-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: #0d2d52;
+  margin-bottom: 8px;
+}
+
+.summary-guests {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: #7a9ab8;
+  margin-bottom: 6px;
+
+  svg {
+    width: 15px;
+    height: 15px;
+    fill: #7a9ab8;
+  }
+}
+
+.summary-price-per {
+  font-size: 14px;
+  color: #4a6a8a;
+  font-weight: 500;
+}
+
+.summary-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+
+  span {
+    font-size: 14px;
+    color: #7a9ab8;
+  }
+
+  strong {
+    font-size: 24px;
+    font-weight: 600;
+    color: #1a3f6f;
+  }
+}
